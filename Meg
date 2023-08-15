@@ -1,0 +1,41 @@
+echo "# RotfMeg" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ihatemylife18/RotfMeg.git
+git push -u origin mainimport random
+import time
+
+def find_enemy_head():
+    print("Scanning for enemy heads...")
+    time.sleep(2)
+    print("Enemy head detected!")
+
+def aim_for_head():
+    print("Auto-aiming for the enemy head...")
+    time.sleep(1)
+    if random.random() < 0.8:  # Simulating an 80% chance of hitting the head
+        print("Headshot!")
+    else:
+        print("Shot missed.")
+
+def main():
+    print("Welcome to the Auto-Headshot Simulator for Transformers: Revenge of the Fallen!")
+    print("Press 'F' to find an enemy head and 'A' to aim for a headshot.")
+    
+    while True:
+        action = input("Enter your action: ").lower()
+        
+        if action == 'f':
+            find_enemy_head()
+        elif action == 'a':
+            aim_for_head()
+        elif action == 'exit':
+            print("Exiting the simulator. Have a blast!")
+            break
+        else:
+            print("Invalid action. Press 'F' to find an enemy head or 'A' to aim for a headshot.")
+
+if __name__ == "__main__":
+    main()
